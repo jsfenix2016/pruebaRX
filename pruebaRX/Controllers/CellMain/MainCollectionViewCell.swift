@@ -23,7 +23,6 @@ class MainCollectionViewCell: UICollectionViewCell {
             DispatchQueue.global(qos: .userInitiated).async {
                 
                 let imageData:NSData = NSData(contentsOf: URL(string: conversation["link"] as! String)!)!
-                let imageView = UIImageView(frame: CGRect(x:0, y:0, width:200, height:200))
               
                 DispatchQueue.main.async {
                     let image = UIImage(data: imageData as Data)
